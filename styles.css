@@ -1,0 +1,32 @@
+.container{
+    display:flex;
+    flex-wrap:wrap;
+    background-image: url("https://bloximages.newyork1.vip.townnews.com/nola.com/content/tncms/assets/v3/editorial/3/c9/3c913fff-add6-5ead-a738-1d697a2c75fd/5e449888b8cc0.image.jpg?resize=400%2C267"); 
+    opacity: calc(90%);
+    background-image:"";
+    background-repeat: no-repeat;
+}
+
+.item{
+    width: 18rem;
+    padding:1% 2%;
+    margin:2% 2%
+}
+.main{
+    width:100%;
+}
+.main h1{
+    margin-left:5%;
+}
+
+span{
+    font-weight:bolder;
+    color:rgb(24, 97, 225);
+}
+
+.item{
+    border: 1px solid rgb(35, 7, 7);
+ 
+}
+
+

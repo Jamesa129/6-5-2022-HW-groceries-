@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/16.3.2/umd/react.production.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/16.3.2/umd/react-dom.production.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.min.js"></script>
+
+    <script type="text/babel" src="data.js"></script>
+    <script type="text/babel" src="app.js"></script>
+
+    <link rel="stylesheet" href="styles.css">
+
+    <title>Fruits Valley</title>
+</head>
+<body>
+    <div class="container">
+    </div>
+
+    <form>
+        <div class="formBox">
+            <label for="title">Additions:</label>
+            <input type="text" id="title" placeholder="Item(s)"/>
+        </div>
+
+        <div class="formBox">
+            <label for="amount">Quantity:</label>
+            <input type="number" id="amount" placeholder="#"/>
+        </div>
+
+        <div class="formBox">
+            <button id="btn">Click to Add</button>
+        </div>
+        </div>
+    </form>
+
+
+    <script>
+        let receipts = [];
+        const addReceipt =(ev)=>{
+
+            ev.preventDefault();
+            let receipt ={
+                id:Date.now(),
+                item:document.getElementById("item").value,
+                amount:document.getElementById("#").value
+            }
+            receipts.push(receipt);
+            document.forms[0].reset();  /*for next additional input(cleans box data)*/
+
+
+
+            console.warn("test",{receipts});
+            let pre =document.querySelector("#msg pre");
+            pre.textContent="\n" + JSON.stringify(movies, "\t",2);
+
+            localStorage.setItem('receipt lists', JSON.stringify(receipts) );
+
+        }
+       document.addEventListener("DOMContentLoaded",()=>{
+           document.getElementById("btn").addEventListener("click",addreceipt);
+       });
+    </script>
+
+</body>
+</html>
